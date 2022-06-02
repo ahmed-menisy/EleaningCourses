@@ -1,0 +1,125 @@
+/* =========================== Header =========================== */
+.header__container {
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: 40% 60%;
+   align-items: center;
+   gap: 4rem;
+   padding-top: 3rem;
+}
+.header__container .header__right p {
+margin: 1rem 0;
+}
+.header__container .header__right .achieve__items {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+   margin-top: 2rem;
+   text-align: center;
+   gap: 2rem;
+}
+.header__container .header__right .achieve__items .item {
+   background-color: var(--color-bg1);
+   padding: 2rem;
+   border-radius: 1rem;
+   transition: var(--transition);
+}
+.header__container .header__right .achieve__items .item:hover {
+   background-color: var(--color-bg2);
+   box-shadow: 2rem 2rem 2rem rgba(0,0,0,.3);
+}
+.header__container .header__right .achieve__items .item i {
+   display: inline-block;
+   font-size: 1.7rem;
+   padding: .7rem 1.2rem;
+   border-radius: 1rem;
+   background-color: var(--color-danger);
+}
+.header__container .header__right .achieve__items .item:nth-child(2) i {
+   background-color: var(--color-success);
+}
+.header__container .header__right .achieve__items .item:nth-child(3) i {
+   background-color: var(--color-primary);
+}
+.header__container .header__right .achieve__items .item h4 {
+   margin: 1rem 0 .4rem;
+}
+/* =========================== MEET TEAM =========================== */
+.meet__team {
+   background-color: var(--color-bg1);
+   box-shadow: 0 0 1rem rgba(0,0,0,.3) inset;
+}
+.meet__team .meet__team-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   gap: 2rem;
+}
+.meet__team .meet__team-container .card {
+   padding: 1.5rem;
+   background-color: var(--color-bg2);
+   border-radius: .7rem;
+   border: 1px solid transparent;
+   transition: var(--transition);
+   position: relative;
+   overflow: hidden;
+}
+.meet__team .meet__team-container .card:hover {
+   background-color: transparent;
+   border: 1px solid var(--color-bg2);
+   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.1) ;
+}
+.meet__team .meet__team-container .card img {
+   border-radius: .7rem;
+   filter: grayscale(1);
+   transition: var(--transition);
+}
+.meet__team .meet__team-container .card:hover img {
+   filter: grayscale(0);
+}
+.meet__team .meet__team-container .card .meet__social {
+   position: absolute;
+   right: -200px;
+   top: 50%;
+   transform: translateY(-50%);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   background-color: var(--color-bg2);
+   padding: 0 1rem;
+   height: 40%;
+   border-radius: .5rem 0 0 .5rem;
+   transition: var(--transition);
+   transition-delay: .2s;
+}
+.meet__team .meet__team-container .card:hover .meet__social {
+   right: 0;
+}
+.meet__team .meet__team-container .card .meet__social a {
+   transition: var(--transition);
+}
+.meet__team .meet__team-container .card .meet__social a:hover {
+   color: var(--color-primary);
+}
+
+.meet__team .meet__team-container .card .meet__info {
+   margin: 2rem 0 0;
+   text-align: center;
+}
+.meet__team .meet__team-container .card .meet__info p {
+   color: var(--color-light);
+   font-size: .8rem;
+   margin-top: .5rem;
+}
+/* =========================== MEDIA QUERIES =========================== */
+@media (max-width: 991.98px) {
+   .header__container {
+      padding: 6rem 0;
+      grid-template-columns: 1fr;
+   }
+   .header__container .header__right .achieve__items {
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   }
+   .header__container .header__left img {
+      object-fit: contain;
+      height: 50vh;
+   }
+}

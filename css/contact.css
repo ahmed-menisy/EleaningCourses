@@ -1,0 +1,96 @@
+/* =========================== CONTACT =========================== */
+.contact__container {
+   background-color: var(--color-bg1);
+   display: grid;
+   grid-template-columns: 40% 60%;
+   gap: 4rem;
+   height: 26rem;
+   padding: 4rem;
+   border-radius: 1rem;
+   margin: 5rem 0;
+}
+.contact__container .contact__left {
+   background-color: var(--color-primary);
+   padding:  2rem;
+   border-radius: 1rem;
+   transform: translateY(-119px);
+}
+.contact__container .contact__left img {
+   width: 12rem;
+   margin-bottom: 2rem;
+}
+.contact__container .contact__left h2 {
+   text-align: left;
+   margin-bottom: 1.7rem;
+}
+.contact__container .contact__left p {
+   font-size: .78rem;
+   margin-bottom: 1.2rem;
+}
+.contact__container .contact__left ul.con__details li{
+   display: flex;
+   align-items: center;
+}
+.contact__container .contact__left ul.con__details li h5 {
+   margin-left: .7rem;
+   font-size: .8rem;
+}
+.contact__container .contact__left ul.con__social{
+   display: flex;
+   margin-top: 1rem;
+   column-gap: .7rem;
+}
+.contact__container .conract__form {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   margin-right: 4rem;
+}
+input , textarea {
+   height: 2.5rem;
+   display: inline-block;
+   padding: 1.4rem;
+   background-color: var(--color-bg);
+   color: var(--color-danger);
+}
+.contact__container .conract__form .form__name {
+   display: flex;
+   gap: 1rem;
+}
+.contact__container .conract__form .form__name input {
+   width: 50%;
+}
+textarea {
+resize: vertical;
+height: 100px;
+}
+.contact__container .conract__form button {
+   width: max-content;
+   margin-top: 1rem;
+}
+/* =========================== MEDIA QUERIES =========================== */
+@media (max-width: 991.98px) {
+   .contact__container {
+      height: auto;
+      gap: 2rem;
+      align-items: center;
+      padding: 1rem;
+   }
+   .contact__container .conract__form  {
+      margin-right: 2rem;
+
+    }
+
+   .contact__container .contact__left {
+      transform: translateY(0);
+      padding: 1rem;
+   }
+}
+@media (max-width: 575.98px) {
+   .contact__container {
+      grid-template-columns: 1fr;
+    }
+    .contact__container .conract__form  {
+       margin-right: 0;
+    }
+ }
