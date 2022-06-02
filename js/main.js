@@ -1,6 +1,6 @@
 "use strict";
 import * as swiper from "./swiper.js";
-import * as nav from './nav.js'
+import * as nav from "./nav.js";
 // ======================= get elemnts
 const faqs = document.querySelectorAll(".faq"); // qustion answer
 // ======================= show / hide faq answer
@@ -19,3 +19,11 @@ const openAnswer = (faq) => {
       icon.classList.replace("uil-minus", "uil-plus");
    }
 };
+// ======================= to top
+const btnToTop = document.getElementById("btnToTop"); // btn to top
+btnToTop.addEventListener("click", () => {
+   scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

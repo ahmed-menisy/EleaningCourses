@@ -15,3 +15,11 @@ function setCount(el){
       }
    },10)
 }
+// ======================= to top
+const btnToTop = document.getElementById("btnToTop"); // btn to top
+btnToTop.addEventListener("click", () => {
+   scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});
